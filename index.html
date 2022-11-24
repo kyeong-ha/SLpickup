@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>별빛수거</title>
+</head>
+<body>
+	<input type="text" value="starlight149@naver.com" style="display: none;">
+	<div id="main" class="column-flex">
+
+		<!-- profile -->
+		<header id="profile" class="column-flex">
+			<div class="logo">
+				<a class="logo-img" href=""><img src="images/logo.png"></a><br>
+				<a class="logo-img" href=""><img src="images/starlight-naming.svg"></a>
+			</div>
+			<h3 class="bio">당신의 하루가 별보다 빛나길,<br>
+				분리수거 대행 서비스</h3>
+		</header>
+
+		<!-- Container -->
+		<main id="container">
+			<section class="app-download-info">
+				<div class="msg">
+					<h1>쓰레기 없는<br>
+						깨끗한 집안,  별빛수거</h1>
+					<h2>‘일상이 편해지다’</h2>
+					<h4>모바일앱으로 더 쉽고 빠르게</br>
+					서비스를 즐겨보세요!</h4>
+				</div>
+			</section>
+
+			
+		</main>
+		<footer> 
+			
+			<div class="contact">
+					<span class="kakao-plus" onclick="link_to_kakao()">
+						<img src="images/kakao_plus.png" srcset="images/kakao_plus@2x.png 2x">
+						<script>
+							function link_to_kakao(){
+								swal("별빛수거 카카오 플러스친구 채널로 이동하시겠습니까?", {
+  									buttons: ["취소", "연결"],
+								}).then(result => {
+									if(result === true){
+										window.open('http://pf.kakao.com/_pzVdxj');
+									}
+								});
+							
+							}
+						</script>
+					</span>
+					<span class="email" onclick="message()">
+						<img src="images/email.png" srcset="images/email@2x.png 2x">
+						<script>
+							function message(){
+								window.navigator.clipboard.writeText("starlight149@naver.com").then(() =>{
+									swal("별빛수거 이메일 주소가 복사되었습니다.", {
+										button: false,
+									});
+								});
+							}
+						</script>
+					</span>
+			</div>
+
+			<div class="footer">
+				<h4>대표: 정현우, 주영현   |  주소: 경기도 하남시 미사강변남로 125, 101동 1927호(망월동)<br>
+					사업자등록번호: 538-69-00439  |  통신판매업 신고번호: 2022-경기하남-2247</h4>
+				<h4>Copyright ⓒ Since 2022 별빛수거. All right Reserved</h4>				</div>
+		</footer>
+		
+	</div>
+</body>
+</html>
