@@ -172,11 +172,14 @@ h4{
     opacity: 0.3;
 }
 
+.contact span img{
+    object-fit: cover;
+}
+
 .logo:first-child img{
     width:15%;
     height:auto;
     transition:all 0.7s;
-    object-fit: cover;
 }
 
 .logo-img img:hover{
@@ -188,7 +191,6 @@ h4{
     width:25%;
     height: auto;
     transition:all 0.7s;
-    object-fit: cover;
 }
 
 
