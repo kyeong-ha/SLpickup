@@ -149,7 +149,7 @@ h4{
 }
 
 .contact .kakao-plus{
-    width: 93%;
+    width: 2em;
     height: auto;
     transition:all 0.7s;
 }
@@ -159,7 +159,7 @@ h4{
 }
 
 .contact .email{
-    width: 90%;
+    width: 2em;
     height: auto;
 }
 
