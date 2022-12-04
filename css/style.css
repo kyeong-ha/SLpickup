@@ -138,7 +138,7 @@ h4{
     justify-content: center;
 }
 #main footer h4{
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
 #main footer h4:last-child{
     color: rgb(101, 101, 101);
@@ -154,7 +154,7 @@ h4{
 }
 
 .contact .kakao-plus{
-    width: 10em;
+    width: 9em;
     height: auto;
     transition:all 0.7s;
     margin-right: 0.4em;
@@ -165,7 +165,7 @@ h4{
 }
 
 .contact .email{
-    width: 18.7em;
+    width: 16.83em;
     height: auto;
 }
 
