@@ -127,20 +127,20 @@ h4{
     margin: 1.5em 0em 2.5em 0em;
 } 
 
-footer{
+#main footer{
     margin-top: 1em;
     width:100%;
     height:auto;
 }
-footer h4{
+#main footer h4{
     font-size: 0.9em;
 }
-footer h4:last-child{
+#main footer h4:last-child{
     color: rgb(101, 101, 101);
 }
 
 
-footer .contact{
+#main footer .contact{
     display:flex;
     justify-content: space-between;
     width:100%;
