@@ -147,14 +147,14 @@ h4{
 
 #main footer .contact{
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     width:100%;
     height: auto;
     margin-bottom: 0.3em;
 }
 
 .contact .kakao-plus{
-    width: 2em;
+    width: 25vw;
     height: auto;
     transition:all 0.7s;
 }
@@ -164,7 +164,7 @@ h4{
 }
 
 .contact .email{
-    width: 2em;
+    width: 50vw;
     height: auto;
 }
 
@@ -176,6 +176,7 @@ h4{
     width:15%;
     height:auto;
     transition:all 0.7s;
+    object-fit: cover;
 }
 
 .logo-img img:hover{
@@ -187,6 +188,7 @@ h4{
     width:25%;
     height: auto;
     transition:all 0.7s;
+    object-fit: cover;
 }
 
 
