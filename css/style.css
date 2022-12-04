@@ -130,7 +130,7 @@ h4{
 #main footer{
     margin-top: 1em;
     width:100%;
-    height:auto;
+    height:100%;
     display:flex;
     align-self:center;
     flex-direction: column;
