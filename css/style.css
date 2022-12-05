@@ -135,7 +135,6 @@ h4{
     align-self:center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 #main footer h4{
     font-size: 0.7em;
@@ -154,7 +153,7 @@ h4{
 }
 
 .contact .kakao-plus{
-    width: 9em;
+    width: 7em;
     height: auto;
     transition:all 0.7s;
     margin-right: 0.4em;
@@ -165,7 +164,7 @@ h4{
 }
 
 .contact .email{
-    width: 16.83em;
+    width: 13.09em;
     height: auto;
 }
 
