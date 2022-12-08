@@ -96,7 +96,7 @@ h2{
 }
 h3{
     margin-top: 0.3em;
-    font-size: 1.2em;
+    font-size: 1rem;
     line-height: 1.3em;
 }
 /* general text */
@@ -109,37 +109,49 @@ h4{
 #main{
     align-self:center;
     display: flex;
-    width:100%;
+    width:fit-content;
     height:100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0vh 20vw 0vh 20vw;
 }
 
 
 #main #profile{
     text-align: center;
-    margin-top: -1em;
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 #main #container{
     margin: 1.5em 0em 2.5em 0em;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 12em;
 } 
 
+.menubar{
+    margin-top: 0.7em;
+    width: 80%;
+    height: auto;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#container .app-download-info{
+    width: 100%;
+    height: 100%;
+}
+
 #container .app-download-info .msg{
-    width: auto;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     overflow-y: scroll;
-    padding: 0vh 20vw 0vh 20vw;
 }
 
 #main footer{
-    margin-top: 1em;
-    width:100%;
+    width:auto;
     height:auto;
+    margin-bottom: 1em;
     text-align: center;
 }
 #main footer h4{
