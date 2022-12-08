@@ -14,7 +14,7 @@ body{
     text-decoration: none;
 	list-style: none;
     color: rgb(22, 22, 22);
-    font-dfamily: 'Pretendard-Light';
+    font-family: 'Pretendard-Light';
     font-weight: 400;
 
     /* blocking drag */
@@ -101,7 +101,7 @@ h3{
 }
 /* general text */
 h4{
-    font-size: 1.1em;
+    font-size: 0.9em;
     line-height: 1.4em;
 }
 
@@ -125,7 +125,16 @@ h4{
 
 #main #container{
     margin: 1.5em 0em 2.5em 0em;
+    width: 100%;
+    height: auto;
 } 
+
+#container .app-download-info .msg{
+    width: auto;
+    height: 40vh;
+    overflow-y: scroll;
+    padding: 0vh 20vw 0vh 20vw;
+}
 
 #main footer{
     margin-top: 1em;
