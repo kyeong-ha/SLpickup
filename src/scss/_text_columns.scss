@@ -1,0 +1,46 @@
+%text-columns{
+    width: 50%;
+    height: 100vh;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+    
+    u{
+      color:#ff6429;
+    }
+    .text-wrap{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;;
+      padding: 0 6.17499675vw;
+      text-align: center;
+      color: #222226;
+      h3{
+        line-height: 1.25em;
+        font-size: calc(.5714285714vw + 33.8285714286px);
+      }
+      h4{
+        margin:0;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+}
+
+%fadein2s{
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+}
+%fadein{
+    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.5s; /* Firefox < 16 */
+     -ms-animation: fadein 0.5s; /* Internet Explorer */
+      -o-animation: fadein 0.5s; /* Opera < 12.1 */
+         animation: fadein 0.5s;
+}

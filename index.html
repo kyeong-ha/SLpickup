@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>별빛수거</title>
+
+	<link rel="stylesheet" href="dest/css/styles.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
 <body>
-	<input type="text" value="starlight149@naver.com" style="display: none;">
-	<div id="main" class="column-flex">
+	<div id="main">
 
-		<!-- profile -->
-		<header id="profile" class="column-flex">
-			<div class="logo">
-				<a class="logo-img" href=""><img src="images/logo.png"></a><br>
-				<a class="logo-img" href=""><img src="images/starlight-naming.svg"></a>
+		<!-- header -->
+		<header id="header">
+			<ul class="header-menu">
+			  <li class="guide">이용가이드</li>
+			  <li class="teamstory">팀스토리</li>
+			</ul>
+
+			<div class="header-logo">
+				<a class="logo-img" href=""><img src="src/img/header/logo.png"></a><br>
+				<a class="logo-svg" href=""><img src="src/img/header/starlight-naming.svg"></a>
 			</div>
-			<h3 class="bio">당신의 하루가 별보다 빛나길,<br>
-				분리수거 대행 서비스</h3>
+			
+			<ul class="header-sns">
+				<a class="kakaoplus" href="http://pf.kakao.com/_pzVdxj">
+					<img src="src/img/header/headset-solid.svg"> 
+				</a>
+				<a class="instagram" href="http://pf.kakao.com/_pzVdxj">
+					<img src="src/img/header/instagram.svg">
+				</a>
+			</ul>
 		</header>
 
-		<nav class="menubar">
-			<a class="guide-tab" href="">가이드</a>
-			<h4>|</h4>
-			<a class="privacyInfo-tab" href="privacy/index.html">개인정보 취급방침</a>
-		</nav>
 		<!-- Container -->
 		<main id="container">
-			<section class="app-download-info">
+				<ul class="slides">
+					<li><p class="slides-text">slide 1</p></li>
+					<li><p class="slides-text">slide 2</p></li>
+					<li><p class="slides-text">slide 3</p></li>
+					<li><p class="slides-text">slide 4</p></li>
+					<li><p class="slides-text">slide 5</p></li>
+					<li><p class="slides-text">slide 6</p></li>
+				  <!-- <li><img src="src/img/container/flower.jpg" alt=""></li>
+				  <li><img src="src/img/container/fox.jpg" alt=""></li>
+				  <li><img src="src/img/container/lightning.jpg" alt=""></li>
+				  <li><img src="src/img/container/moon.jpg" alt=""></li>
+				  <li><img src="src/img/container/nature.jpg" alt=""></li>
+				  <li><img src="src/img/container/space.jpg" alt=""></li> -->
+				</ul> 
+
+
+			<!-- <section class="app-download-info">
 				<div class="msg">
 					<h1>쓰레기 없는<br>
 						깨끗한 집안,  별빛수거</h1>
@@ -37,12 +60,11 @@
 					<h4>모바일앱으로 더 쉽고 빠르게</br>
 					서비스를 즐겨보세요!</h4>
 				</div>
-			</section>
-
-			
+			</section> -->
 		</main>
-		<footer> 
-			
+
+
+		<!-- <footer> 
 			<div class="contact">
 					<span class="kakao-plus" onclick="link_to_kakao()">
 						<img src="images/kakao_plus.png" srcset="images/kakao_plus@2x.png 2x">
@@ -77,8 +99,11 @@
 				<h4>대표: 정현우, 주영현   |  주소: 경기도 하남시 미사강변남로 125, 101동 1927호(망월동)<br>
 					사업자등록번호: 538-69-00439  |  통신판매업 신고번호: 2022-경기하남-2247</h4>
 				<h4>Copyright ⓒ Since 2022 별빛수거. All right Reserved</h4>				</div>
-		</footer>
+		</footer> -->
 		
 	</div>
+	<script src="https://kit.fontawesome.com/d0b020e67b.js" crossorigin="anonymous"></script>
+	<script src="src/js/header_scroll_event.js"></script>
+	<script src="src/js/text_column_scroll_event.js"></script>
 </body>
 </html>
