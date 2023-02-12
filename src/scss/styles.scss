@@ -12,9 +12,9 @@ html, body, ul, li, p, a{
 body{
   width:100%;
   height:100%;
+  background-color: #E6EEF4;
 }
 #main{
-  
   #header{
     @extend %fadein;
     
@@ -96,41 +96,16 @@ body{
     transition: all 1s 0s linear;
 
    /* 보여줄 구간의 높이와 넓이 설정 */
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;   
+    width: 75%;
+    height: 300vh;
 
-    .slides{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      transition: top 1s ease-out; 
-      /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
-      li {
-        width: 100vw;
-        height: 100vh;
-        
-        img{
-          background-position: center;
-          background-size: contain;
-          width: 100vw;
-          height: 100vh;
-        }
-      }
-      .slides-text{
-        // width: 100vw;
-        // height: 100vh;
-        // display: inline-block;
-        // vertical-align: middle;
-        // text-align: center;
-        position:relative;
-        top: 10vh;
-        left: 10vw;
-      }
-    }
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    // overflow: hidden;   
+
+    background: #FFFFFF;
+    box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
   }
 }
 
