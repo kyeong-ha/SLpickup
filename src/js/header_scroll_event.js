@@ -5,7 +5,7 @@ window.addEventListener("scroll", (event) => {
 
     if(scrollY > 56){
         header.style.backgroundColor = '#FFF';
-        header.style.boxShadow = '0px 1px 8px 1px rgb(152, 152, 152)';
+        header.style.boxShadow = '0px 2px 8px -4px rgb(152, 152, 152)';
     }else{
         header.style.backgroundColor = 'transparent';
         header.style.boxShadow = '0px 0px 0px 0px';

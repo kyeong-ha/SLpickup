@@ -1,5 +1,26 @@
 @import '_text_columns.scss';
 
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body, ul, li, p, a{
   margin:0;
   padding:0;
@@ -15,80 +36,50 @@ body{
   background-color: #E6EEF4;
 }
 #main{
+  display : flex;
+  justify-content: center;
+
   #header{
     @extend %fadein;
     
     background-color: #ffffff;
-    background-color: rgba( 255, 255, 255, 0.3);
+    background-color: rgba( 255, 255, 255, 0.5);
 
-    position: fixed;
+    position: sticky;
+    top: 0;
 
-    width: 100vw-12.4vw;
+    width: 100%;
+    // height: 14.3vh;
     height: max-content;
-    
+    overflow: hidden;
+
     display:flex;
     align-items: center;
     justify-content:center;
 
-    padding: 1.2vh 6.2vw 1.2vh 6.2vw;
-    
     transition: all 0.2s 0s linear;
     z-index: 1;
 
-    > *{
-      filter: drop-shadow(0px 0px 2rem #bbe4fd);
-    }
-    .header-menu{
-      width: auto;
+    .menubar{
+      width: 100%;
       height: 100%;
       
       display: flex;
-      flex-grow: 1;
-      
-      li{ padding-right: 1em; }
-    }
-    .header-logo{
-      flex-grow: 1;
-      text-align: center;
-
-      display: flex;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
-      
-      .logo-img img{
-        display: flex;
-        align-items: center;
-        
-        width: auto;
-        height: 3em;
-      }
-      .logo-svg img{
-        display: flex;
-        align-items: center;
-        filter: drop-shadow(0px 0px 0.8rem #d2eeff);
-        margin-left: 0.5em;
-        width: auto;
-        height: 1.9em;
-      }
     }
-    .header-sns{
-      display: flex;
-      justify-content: end;
-      align-items: center;
-
-      flex-grow: 1;
-
+    .button{
+      color: #989BA1;
+      font-size: 1.23em;
+      font-family: 'GmarketSansLight';
+    }
+    .logo{
       img{
-        display: flex;
-        align-items: center;
-        filter: invert(16%) sepia(10%) saturate(4463%) hue-rotate(182deg) brightness(99%) contrast(90%);
         width: auto;
-        height: 2.5em;
-      }
-      .instagram{ margin-left: 1em; }
-        padding-left: 1em;
+        height: 5.5em;
       }
     }
+  }
   
 
   #container{
@@ -97,12 +88,7 @@ body{
 
    /* 보여줄 구간의 높이와 넓이 설정 */
     width: 75%;
-    height: 300vh;
-
-    position: absolute;
-    left: 50%; 
-    transform: translateX(-50%);
-    // overflow: hidden;   
+    height: 300vh; 
 
     background: #FFFFFF;
     box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
