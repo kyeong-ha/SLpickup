@@ -1,26 +1,7 @@
 @import '_text_columns.scss';
+@import '_font_imports.scss';
 
-@font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GmarketSansLight';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GmarketSansBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* init */
 html, body, ul, li, p, a{
   margin:0;
   padding:0;
@@ -30,15 +11,20 @@ html, body, ul, li, p, a{
   text-decoration: none;
   color: #121212;
 }
+
 body{
   width:100%;
   height:100%;
   background-color: #E6EEF4;
 }
+
+
+/* main */
 #main{
   display : flex;
   justify-content: center;
 
+  /* main - header */
   #header{
     @extend %fadein;
     
@@ -49,7 +35,6 @@ body{
     top: 0;
 
     width: 100%;
-    // height: 14.3vh;
     height: max-content;
     overflow: hidden;
 
@@ -81,7 +66,7 @@ body{
     }
   }
   
-
+  /* main - container */
   #container{
     @extend %fadein;
     transition: all 1s 0s linear;
@@ -92,6 +77,19 @@ body{
 
     background: #FFFFFF;
     box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
+    .main_image{
+      width: 100%;
+      height: 100%;
+      // background: url('/src/img/container/section1.png');
+      // img{
+      //   width: auto;
+      //   height: auto;
+      //   object-fit: cover;
+      // }
+      .img{
+        background: url('//src/img/container/section1.png');
+      }
+    }
   }
 }
 
