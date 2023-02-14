@@ -69,11 +69,13 @@ h2{
       color: #7b7e83;
       font-size: 1.23em;
       font-family: 'GmarketSansLight';
+      cursor: pointer;
     }
     .logo{
       img{
         width: auto;
         height: 5.5em;
+        cursor: pointer;
       }
     }
   }
@@ -89,6 +91,7 @@ h2{
 
     background: #FFFFFF;
     box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
+
     .main_image{
       width: 100%;
       height: min-content;
@@ -113,26 +116,102 @@ h2{
 
   .main_info{
     width: 100%;
+    overflow-x: hidden;
+
     h1{
       margin-left: 6.7%;
     }
-    .slides{
-      width: calc(75% * 3);
+    .slide_wrap{
+      width: calc(100% * 3);
       height: auto;
 
+      position: relative;
       display: flex;
-      
-      // position: absolute;
-      // justify-content: center;
 
+      left: -39.5%;
+      
       .slide{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+
+        // display: inline-block;
+        position: relative;
+
         width: 100%;
+        height: auto;
         img{
           width: 100%;
           height: auto;
+        }
+        .item1{
+
+        }
+        .item2{
+
+        }
+        .item3{
           
         }
       }
+
+      .slide_pagination {
+        /* layout */
+        display: flex;
+        gap: 5px;
+
+        /* position */
+        position: absolute;
+        bottom: 0;
+        /* left:50%, translateX(-50%)를 하면 가로 가운데로 위치시킬 수 있다. */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .slide_pagination > li {
+        /* 현재 슬라이드가 아닌 것은 투명도 부여 */
+        color: #7fb5ff88;
+        cursor: pointer;
+        font-size: 25px;
+      }
+      .slide_pagination > li.active {
+        /* 현재 슬라이드 색상은 투명도 없이 */
+        color: #7fb5ff;
+      }
+
+    //   .slide_button_wrap {
+    //     /* layout */
+    //     display: flex;
+    //     justify-content:center;
+    //     align-items: center;
+      
+    //     /* position */
+    //     position: absolute;
+    //     /* 버튼이 중앙에 위치하게 하기위해 계산 */
+    //     top: 50%;
+
+    //     /* size */
+    //     width: 100%;
+    //     height: auto;
+    //   }
+    //   .slide_button{
+    //     display: flex;
+    //     justify-content:center;
+    //     align-items: center;
+
+    //     width: 4vw;
+    //     height: 4vw;
+    //     border-radius: 100%;
+    //     background-color: rgba(214, 214, 214, 0.408);
+    //     cursor: pointer;
+
+    //     position: relative;
+    //   }
+    //   .slide_prev_button {
+    //     right: 19%;
+    //   }
+    //   .slide_next_button {
+    //     left: 17%;
+    //   }
     }
   }
 }
