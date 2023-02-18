@@ -1,15 +1,12 @@
 // 슬라이드 전체 크기(width 구하기)
 const slide = document.querySelector(".slide");
-// let slideWidth = slide.clientWidth + (slide.clientWidth * 1/2);
 let slideWidth = slide.clientWidth;
 
 let slideItems = document.querySelectorAll(".slide");
-// 현재 슬라이드 위치가 슬라이드 개수를 넘기지 않게 하기 위한 변수
 const maxSlide = slideItems.length;
 
-let currSlide = 1; //현재 위치한 슬라이드 index
+let currSlide = 0;
 
-// 페이지네이션 생성
 const pagination = document.querySelector(".slide_pagination");
 
 for (let i = 0; i < maxSlide; i++) {
@@ -19,7 +16,7 @@ for (let i = 0; i < maxSlide; i++) {
 
 const paginationItems = document.querySelectorAll(".slide_pagination > li");
 
-// 무한 슬라이드를 위해 start, end 슬라이드 복사하기
+// 무한 슬라이드를 위해 start, end 슬라이드 복사
 const startSlide = slideItems[0];
 const endSlide = slideItems[slideItems.length - 1];
 const startElem = document.createElement("div");
@@ -31,91 +28,57 @@ endElem.innerHTML = endSlide.innerHTML;
 startSlide.classList.forEach((c) => startElem.classList.add(c));
 startElem.innerHTML = startSlide.innerHTML;
 
-// 각 복제한 엘리먼트 추가하기
+
+// 각 복제한 엘리먼트 추가
 slideItems[0].before(endElem);
 slideItems[slideItems.length - 1].after(startElem);
 
-// 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택하기
-slideItems = document.querySelectorAll(".slide");
+// 엘리먼트 추가 후 wrap 크기 재조정
+const wrap = document.querySelector(".slide_wrap");
+wrap.style.width = 65 * (maxSlide+2) + '%';
 
+
+// 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택
+slideItems = document.querySelectorAll(".slide");
 slideWidth = slide.clientWidth;
+
 function nextMove() {
   currSlide++;
 
-  // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위해서
+  // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위함
   if (currSlide < maxSlide) {
     const offset = slideWidth * currSlide;
-    // 각 슬라이드 아이템의 left에 offset 적용
-    // console.log('dfdf');
-
+ 
     slideItems.forEach((i) => {
-      i.setAttribute("style", `transition: ${0.15}s; left: ${-slideWidth}px`);
+      i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
     });
 
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
+    paginationItems[currSlide].classList.add("active");
   } else {
-    // 무한 슬라이드 기능 - currSlide 값만 변경해줘도 되지만 시각적으로 자연스럽게 하기 위해 아래 코드 작성
     currSlide = 0;
+    
     let offset = slideWidth * currSlide;
 
     slideItems.forEach((i) => {
-      i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+      i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
     });
 
-    currSlide++;
     offset = slideWidth * currSlide;
-    // 각 슬라이드 아이템의 left에 offset 적용
+
     setTimeout(() => {
-      // 각 슬라이드 아이템의 left에 offset 적용
       slideItems.forEach((i) => {
-        // i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-        i.setAttribute("style", `transition: ${0.15}s; left: ${-slideWidth}px`);
-        console.log('dfdf');
+        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
       });
     }, 0);
 
     // // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
+    paginationItems[currSlide].classList.add("active");
   }
 }
-function prevMove() {
-  currSlide--;
-  // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
-  if (currSlide > 0) {
-    // 슬라이드를 이동시키기 위한 offset 계산
-    const offset = slideWidth * currSlide;
-    // 각 슬라이드 아이템의 left에 offset 적용
-    slideItems.forEach((i) => {
-      i.setAttribute("style", `left: ${-offset}px`);
-    });
-    // 슬라이드 이동 시 현재 활성화된 pagination 변경
-    paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
-  } else {
-    // 무한 슬라이드 기능 - currSlide 값만 변경해줘도 되지만 시각적으로 자연스럽게 하기 위해 아래 코드 작성
-    currSlide = maxSlide + 1;
-    let offset = slideWidth * currSlide;
-    // 각 슬라이드 아이템의 left에 offset 적용
-    slideItems.forEach((i) => {
-      i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-    });
-    currSlide--;
-    offset = slideWidth * currSlide;
-    setTimeout(() => {
-      // 각 슬라이드 아이템의 left에 offset 적용
-      slideItems.forEach((i) => {
-        // i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
-      });
-    }, 0);
-    // 슬라이드 이동 시 현재 활성화된 pagination 변경
-    paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
-  }
-}
+
 
 // 브라우저 화면이 조정될 때 마다 slideWidth를 변경하기 위해
 window.addEventListener("resize", () => {
@@ -127,7 +90,7 @@ for (let i = 0; i < maxSlide; i++) {
   // 각 페이지네이션마다 클릭 이벤트 추가하기
   paginationItems[i].addEventListener("click", () => {
     // 클릭한 페이지네이션에 따라 현재 슬라이드 변경해주기(currSlide는 시작 위치가 1이기 때문에 + 1)
-    currSlide = i + 1;
+    currSlide = i;
     // 슬라이드를 이동시키기 위한 offset 계산
     const offset = slideWidth * currSlide;
     // 각 슬라이드 아이템의 left에 offset 적용
@@ -136,7 +99,7 @@ for (let i = 0; i < maxSlide; i++) {
     });
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
+    paginationItems[currSlide].classList.add("active");
   });
 }
 
@@ -177,7 +140,7 @@ slide.addEventListener("touchend", (e) => {
 
 // 기본적으로 슬라이드 루프 시작하기
 let loopInterval = setInterval(() => {
-//   nextMove();
+    nextMove();
 }, 3000);
 
 // 슬라이드에 마우스가 올라간 경우 루프 멈추기

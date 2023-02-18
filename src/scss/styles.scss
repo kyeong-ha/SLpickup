@@ -22,7 +22,7 @@ h1, h2{
   display: inline;
   color: #393939;
   font-family: 'GmarketSansBold';
-  font-size: 2.7vw;
+  font-size: 3vw;
   letter-spacing: -0.13vw;
 }
 h2{
@@ -74,7 +74,7 @@ h2{
     .logo{
       img{
         width: auto;
-        height: 5.5em;
+        height: 6.5vw;
         cursor: pointer;
       }
     }
@@ -120,26 +120,21 @@ h2{
 
     h1{
       margin-left: 6.7%;
+      margin-bottom: 1%;
     }
     .slide_wrap{
-      width: calc(100% * 3);
+      width: calc(65% * 3);
       height: auto;
 
       position: relative;
       display: flex;
 
-      left: -39.5%;
-      
+      left: -46%;
       .slide{
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-
-        // display: inline-block;
         position: relative;
-
         width: 100%;
         height: auto;
+        padding-bottom: 3vh;
         img{
           width: 100%;
           height: auto;
@@ -156,62 +151,24 @@ h2{
       }
 
       .slide_pagination {
-        /* layout */
         display: flex;
         gap: 5px;
 
-        /* position */
         position: absolute;
-        bottom: 0;
-        /* left:50%, translateX(-50%)를 하면 가로 가운데로 위치시킬 수 있다. */
-        left: 50%;
+
+        left: 30%;
         transform: translateX(-50%);
+        bottom: 0;
+
       }
       .slide_pagination > li {
-        /* 현재 슬라이드가 아닌 것은 투명도 부여 */
         color: #7fb5ff88;
         cursor: pointer;
         font-size: 25px;
       }
       .slide_pagination > li.active {
-        /* 현재 슬라이드 색상은 투명도 없이 */
         color: #7fb5ff;
       }
-
-    //   .slide_button_wrap {
-    //     /* layout */
-    //     display: flex;
-    //     justify-content:center;
-    //     align-items: center;
-      
-    //     /* position */
-    //     position: absolute;
-    //     /* 버튼이 중앙에 위치하게 하기위해 계산 */
-    //     top: 50%;
-
-    //     /* size */
-    //     width: 100%;
-    //     height: auto;
-    //   }
-    //   .slide_button{
-    //     display: flex;
-    //     justify-content:center;
-    //     align-items: center;
-
-    //     width: 4vw;
-    //     height: 4vw;
-    //     border-radius: 100%;
-    //     background-color: rgba(214, 214, 214, 0.408);
-    //     cursor: pointer;
-
-    //     position: relative;
-    //   }
-    //   .slide_prev_button {
-    //     right: 19%;
-    //   }
-    //   .slide_next_button {
-    //     left: 17%;
-    //   }
     }
   }
 }
