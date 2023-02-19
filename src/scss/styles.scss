@@ -29,7 +29,6 @@ h2{
   color:#1E49B3
 }
 
-
 /* main */
 #main{
   display : flex;
@@ -86,7 +85,7 @@ h2{
 
    /* 보여줄 구간의 높이와 넓이 설정 */
     width: 75%;
-    height: 300vh; 
+    height: max-content; 
 
     background: #FFFFFF;
     box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
@@ -116,7 +115,7 @@ h2{
   .main_info{
     width: 100%;
     overflow-x: hidden;
-
+    margin-bottom: 5%;
     h1{
       margin-left: 6.7%;
       margin-bottom: 1%;
@@ -133,7 +132,7 @@ h2{
         position: relative;
         width: 100%;
         height: auto;
-        padding-bottom: 3vh;
+        padding-bottom: 1.1%;
         img{
           width: 100%;
           height: auto;
@@ -151,7 +150,7 @@ h2{
 
       .slide_pagination {
         display: flex;
-        gap: 5px;
+        gap: 1%;
 
         position: absolute;
 
@@ -163,7 +162,7 @@ h2{
       .slide_pagination > li {
         color: #7fb5ff88;
         cursor: pointer;
-        font-size: 25px;
+        font-size: 3.2vw;
       }
       .slide_pagination > li.active {
         color: #7fb5ff;
@@ -174,7 +173,7 @@ h2{
   .region_info{
     width: 100%;
     height: max-content;
-    margin-top:4%;
+    margin-top:8%;
 
     h1{
       margin-left: 6.7%;
@@ -200,8 +199,62 @@ h2{
     }
   }
 
+  .side_image{
+    width: 100%;
+    height: min-content;
 
+    margin-top: 8%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
   
+  .footer{
+    width: 100%;
+    height: auto;
+    background-color: #ECF4FA;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 7%;
+
+    .footer_logo{
+      padding-top: 3.6%;
+      img{
+        width: auto;
+        height: 8vw;
+        cursor: pointer;
+      }
+    }
+    
+    p{
+      color: #585766;
+      font-size: 1.3vw;
+      line-height: 1.8vw;
+      font-family: 'GmarketSansLight';
+    }
+    .copyright{
+      line-height: 4vw;
+    }
+    .side_link{
+      margin-top: 1%;
+      padding-bottom: 2.2%;
+
+      width: 30%;
+      height: auto;
+
+      display: flex;
+      justify-content: space-around;
+
+      color: #213567;
+      font-size: 1.3vw;
+      font-family: 'GmarketSansMedium';
+    }
+  }
 }
 
 

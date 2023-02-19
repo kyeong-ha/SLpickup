@@ -1,5 +1,5 @@
 RewriteEngine On
 RewriteBase /
 RewriteCond $1 !^(terms_of_service)/
-RewriteCond %{HTTP_HOST} ^terms_of_service\.aaa\.com [NC]
+RewriteCond %{HTTP_HOST} ^terms_of_service\.starpickup\.com [NC]
 RewriteRule ^(.*)$ /terms_of_service/$1 [L]
