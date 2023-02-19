@@ -5,7 +5,7 @@ let slideWidth = slide.clientWidth;
 let slideItems = document.querySelectorAll(".slide");
 const maxSlide = slideItems.length;
 
-let currSlide = 0;
+let currSlide = -1;
 
 const pagination = document.querySelector(".slide_pagination");
 
@@ -57,14 +57,15 @@ function nextMove() {
     paginationItems.forEach((i) => i.classList.remove("active"));
     paginationItems[currSlide].classList.add("active");
   } else {
-    currSlide = 0;
+    currSlide = -1;
     
     let offset = slideWidth * currSlide;
 
     slideItems.forEach((i) => {
-      i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+      i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
     });
 
+    currSlide++;
     offset = slideWidth * currSlide;
 
     setTimeout(() => {
@@ -138,7 +139,7 @@ slide.addEventListener("touchend", (e) => {
 // 기본적으로 슬라이드 루프 시작하기
 let loopInterval = setInterval(() => {
     nextMove();
-}, 3000);
+}, 3500);
 
 // 슬라이드에 마우스가 올라간 경우 루프 멈추기
 slide.addEventListener("mouseover", () => {
@@ -149,5 +150,5 @@ slide.addEventListener("mouseover", () => {
 slide.addEventListener("mouseout", () => {
   loopInterval = setInterval(() => {
     nextMove();
-  }, 3000);
+  }, 3500);
 });
