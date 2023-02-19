@@ -3,3 +3,32 @@ RewriteBase /
 RewriteCond $1 !^(terms_of_service)/
 RewriteCond %{HTTP_HOST} ^terms_of_service\.starpickup\.com [NC]
 RewriteRule ^(.*)$ /terms_of_service/$1 [L]
+
+#### 특수활용 2차이상서브도메인을 존재하는 폴더로 연결
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^(?!www\.)([^.]+)\.starlightpickup\.kr$ [NC]
+RewriteCond %{REQUEST_URI}::%1 !^/([^/]+).*?::\1
+RewriteRule ^(.*)$ /%1/$1 [L]
+
+RewriteCond %{HTTP_HOST} ^(?!www\.)(.*)\.starlightpickup\.kr$ [NC]
+RewriteCond %{REQUEST_URI}::%1 !^/([^/]+).*?::\1
+RewriteRule ^(.*)$ /%1/$1 [L]
+
+>> privacy_policy.starlightpickup.kr   path : ~/privacy_policy
+
+>> terms_of_service.comu.starlightpickup.kr path : ~/terms_of_service
+
+; >> gun.comu.starlightpickup.kr : ~/gun.comu
+
+; >> gun.news.instostarlightpickuprys.kr : ~/gun.news
+
+; >> gun.food.starlightpickup.kr : ~/gun.food
+
+; >> gun.news.starlightpickup.kr : ~/gun.news
+
+## ssl 강제포워딩 post 일경우 주의필요함.
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
