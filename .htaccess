@@ -1,10 +1,10 @@
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^(www\.kyeong-ha.github.io/SLpickup|kyeong-ha.github.io/SLpickup)
-RewriteRule (.*)  http://www.starpickup.com/$1  [L]
+RewriteCond %{HTTP_HOST} ^(starlightpickup.kr/terms_of_service/index\.html|www\.starlightpickup.kr/terms_of_service/index\.html)
+RewriteRule (.*)  /terms_of_service/$1  [L]
 
-RewriteCond %{HTTP_HOST} ^(kyeong-ha.github.io/SLpickup/terms_of_service/index\.html|www\.kyeong-ha.github.io/SLpickup/terms_of_service/index\.html)
-RewriteRule (.*)  http://www.starpickup.com/terms_of_service/$1  [L]
+RewriteCond %{HTTP_HOST} ^(starlightpickup.kr/privacy_policy/index\.html|www\.starlightpickup.kr/privacy_policy/index\.html)
+RewriteRule (.*)  /privacy_policy/$1  [L]
 
 ; ; RewriteEngine On
 ; ; RewriteBase /
