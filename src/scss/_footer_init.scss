@@ -23,34 +23,56 @@
 
     .footer_logo{
       padding-top: 3.6%;
-      padding-bottom: 1%;
+      padding-bottom: 1.5%;
+      display: flex;
+      justify-content: center;
       img{
-        width: auto;
-        height: 8vw;
+        width: min(6vw, 77px);
+        height: auto;
       }
     }
-    
     p{
       color: #585766;
-      font-size: 1.3vw;
-      line-height: 1.8vw;
+      font-size: min(1.3vw, 16.5px);
+      line-height: min(2vw, 25px);
       font-family: 'GmarketSansLight';
     }
     .copyright{
-      line-height: 4vw;
+      line-height: min(4vw,44px);
     }
     .side_link{
-      margin-top: 1%;
+      margin-top: 0.5%;
       padding-bottom: 2.2%;
 
-      width: 30%;
+      width: 28%;
       height: auto;
 
       display: flex;
       justify-content: space-around;
 
-      color: #213567;
-      font-size: 1.3vw;
+      color: #3b528a;
+      font-size: min(1.3vw, 16.5px);
       font-family: 'GmarketSansMedium';
+    }
+    
+  }
+
+  @media screen and (max-width: 750px) {
+    .footer{
+      .footer_logo{
+        img{
+          width: max(7.5vw, 30px);
+        }
+      }
+      p{
+        font-size: max(1.7vw, 9.7px);
+        line-height: max(2vw, 14.5px);
+      }
+      .copyright{
+        line-height: max(5.6vw, 23px);
+      }
+      .side_link{
+        font-size: max(1.7vw, 9.7px);
+      }
     }
   }

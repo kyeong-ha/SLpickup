@@ -20,7 +20,7 @@ h1, h2{
     display: inline;
     color: #393939;
     font-family: 'GmarketSansBold';
-    font-size: 3vw;
+    font-size: min(3vw, 43px);
     letter-spacing: -0.13vw;
 }
 h2{
@@ -62,14 +62,18 @@ h2{
     }
     .button{
       color: #7b7e83;
-      font-size: 1.5vw;
+      font-size: min(1.5vw, 21px);
       font-family: 'GmarketSansLight';
       cursor: pointer;
     }
     .logo{
+      a{
+        display: flex;
+        align-items: center;
+      }
       img{
         width: auto;
-        height: 6.5vw;
+        height: min(6.5vw, 93px);
         cursor: pointer;
       }
     }
@@ -86,4 +90,20 @@ h2{
     
     background: #FFFFFF;
     box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
+}
+
+
+@media screen and (max-width: 750px) {
+  #container{
+    width: 100%;
+  }
+  #header .button{
+    font-size: max(2.1vw, 13px);
+  }
+  #header .logo{
+    img{
+      width: max(9vw, 50px);
+      height: auto;
+    }
+  }
 }
