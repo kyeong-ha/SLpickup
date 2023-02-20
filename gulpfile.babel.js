@@ -11,8 +11,6 @@ const routes = {
   css: {
     watch: "src/scss/*",
     src: "src/scss/*.scss",
-
-    // src: "src/scss/terms_of_service_styles.scss",
     dest: "dest/css",
   },
 };
