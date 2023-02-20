@@ -1,0 +1,89 @@
+/* init */
+html, body, ul, li, p, a{
+    margin:0;
+    padding:0;
+    border: 0;
+    vertical-align: middle;
+    list-style-type: none;
+    text-decoration: none;
+    color: #121212;
+}
+
+body{
+    width:100%;
+    height:100%;
+    background-color: #E6EEF4;
+    font-size: 2.5vw;
+}
+
+h1, h2{
+    display: inline;
+    color: #393939;
+    font-family: 'GmarketSansBold';
+    font-size: 3vw;
+    letter-spacing: -0.13vw;
+}
+h2{
+    color:#1E49B3
+}
+
+#main{
+    display : flex;
+    justify-content: center;
+}
+
+#header{
+    @extend %fadein;
+    
+    // background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.856);
+
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+    transition: all 0.2s 0s linear;
+    z-index: 999;
+
+    .menubar{
+      width: 100%;
+      height: 100%;
+      
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .button{
+      color: #7b7e83;
+      font-size: 1.5vw;
+      font-family: 'GmarketSansLight';
+      cursor: pointer;
+    }
+    .logo{
+      img{
+        width: auto;
+        height: 6.5vw;
+        cursor: pointer;
+      }
+    }
+}
+
+#container{
+    @extend %fadein;
+    transition: all 1s 0s linear;
+
+    width: 75%;
+    height: max-content; 
+
+    max-width: 1050px;
+    
+    background: #FFFFFF;
+    box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
+}

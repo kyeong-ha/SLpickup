@@ -1,37 +1,4 @@
-@import '_text_columns.scss';
+@import '_animations.scss';
 @import '_font_imports.scss';
-
-/* init */
-html, body, ul, li, p, a{
-  margin:0;
-  padding:0;
-  border: 0;
-  vertical-align: middle;
-  list-style-type: none;
-  text-decoration: none;
-  color: #121212;
-}
-
-body{
-  width:100%;
-  height:100%;
-  background-color: #E6EEF4;
-}
-
-h1, h2{
-  display: inline;
-  color: #393939;
-  font-family: 'GmarketSansBold';
-  font-size: 3vw;
-  letter-spacing: -0.13vw;
-}
-h2{
-  color:#1E49B3
-}
-
-/* main */
-#main{
-  display : flex;
-  justify-content: center;
-
-}
+@import '_main_init.scss';
+@import '_footer_init.scss';

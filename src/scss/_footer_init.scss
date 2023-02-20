@@ -1,0 +1,56 @@
+.side_image{
+    width: 100%;
+    height: min-content;
+
+    margin-top: 8%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .footer{
+    width: 100%;
+    height: auto;
+    background-color: #ECF4FA;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 7%;
+
+    .footer_logo{
+      padding-top: 3.6%;
+      padding-bottom: 1%;
+      img{
+        width: auto;
+        height: 8vw;
+      }
+    }
+    
+    p{
+      color: #585766;
+      font-size: 1.3vw;
+      line-height: 1.8vw;
+      font-family: 'GmarketSansLight';
+    }
+    .copyright{
+      line-height: 4vw;
+    }
+    .side_link{
+      margin-top: 1%;
+      padding-bottom: 2.2%;
+
+      width: 30%;
+      height: auto;
+
+      display: flex;
+      justify-content: space-around;
+
+      color: #213567;
+      font-size: 1.3vw;
+      font-family: 'GmarketSansMedium';
+    }
+  }
