@@ -1,4 +1,5 @@
-// 슬라이드 크기
+const slideWrap = document.querySelector(".main_info");
+
 const slide = document.querySelector(".slide");
 let slideWidth = slide.clientWidth;
 
@@ -80,6 +81,40 @@ function nextMove() {
   }
 }
 
+function prevMove() {
+  currSlide--;
+  // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
+  if (currSlide > -1) {
+    const offset = slideWidth * currSlide;
+
+    slideItems.forEach((i) => {
+      i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+    });
+
+    paginationItems.forEach((i) => i.classList.remove("active"));
+    paginationItems[currSlide].classList.add("active");
+  } else {
+    currSlide = maxSlide;
+    let offset = slideWidth * currSlide;
+
+    slideItems.forEach((i) => {
+      i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+    });
+
+    currSlide--;
+    offset = slideWidth * currSlide;
+
+    setTimeout(() => {
+
+      slideItems.forEach((i) => {
+        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+      });
+    }, 0);
+
+    paginationItems.forEach((i) => i.classList.remove("active"));
+    paginationItems[currSlide].classList.add("active");
+  }
+}
 
 // 브라우저 화면이 조정될 때 마다 slideWidth를 변경하기 위해
 window.addEventListener("resize", () => {
@@ -106,11 +141,11 @@ let startPoint = 0;
 let endPoint = 0;
 
 // PC 클릭 이벤트 (드래그)
-slide.addEventListener("mousedown", (e) => {
+slideWrap.addEventListener("mousedown", (e) => {
   startPoint = e.pageX; // 마우스 드래그 시작 위치 저장
 });
 
-slide.addEventListener("mouseup", (e) => {
+slideWrap.addEventListener("mouseup", (e) => {
   endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
   if (startPoint < endPoint) {
     // 마우스가 오른쪽으로 드래그 된 경우
@@ -122,10 +157,10 @@ slide.addEventListener("mouseup", (e) => {
 });
 
 // 모바일 터치 이벤트 (스와이프)
-slide.addEventListener("touchstart", (e) => {
+slideWrap.addEventListener("touchstart", (e) => {
   startPoint = e.touches[0].pageX; // 터치가 시작되는 위치 저장
 });
-slide.addEventListener("touchend", (e) => {
+slideWrap.addEventListener("touchend", (e) => {
   endPoint = e.changedTouches[0].pageX; // 터치가 끝나는 위치 저장
   if (startPoint < endPoint) {
     // 오른쪽으로 스와이프 된 경우
