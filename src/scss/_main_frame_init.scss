@@ -1,4 +1,12 @@
 /* init */
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+      box-sizing: inherit;
+  }
+}
+
 html, body, ul, li, p, a{
     margin:0;
     padding:0;
@@ -7,6 +15,9 @@ html, body, ul, li, p, a{
     list-style-type: none;
     text-decoration: none;
     color: #121212;
+
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body{

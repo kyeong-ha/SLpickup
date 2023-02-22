@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="dest/css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	
+	<script src="http://code.jquery.com/jquery-3.6.3.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
@@ -105,20 +106,55 @@
 
 				<ul class="side_link">
 					<li class="terms_of_service">
-					  <a href="javascript:void(0)" onclick="location.href='terms_of_service'">이용약관</a>
+						<a id="terms_of_service_btn">이용약관</a>
 				  	</li>
 					<li class="privacy_policy">
-						<a href="javascript:void(0)" onclick="location.href='privacy_policy'">개인정보처리방침</a>
-					</li>
+						<a id="privacy_policy_btn">개인정보처리방침</a>
+					</li>	
 				</ul>
-
 			</footer>
+
+			<!-- 개인정보처리방침 팝업창 -->
+			<div class="popup-wrap" id="privacy_popup">
+				<div class="popup">
+	  
+				  <div class="popup-body">
+					  <div class="body-titlebox">
+						<h1>개인정보처리방침</h1>
+					  </div>
+					  <div class="body-contentbox">
+						<p></p>
+					  </div>
+					  
+					  
+					  <div class="pop-btn pop-button" id="privacy_confirm">확인</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 이용약관 팝업창 -->
+			<div class="popup-wrap" id="terms_popup">
+				<div class="popup">
+	  
+				  <div class="popup-body">
+					  <div class="body-titlebox">
+						<h1>이용약관</h1>
+					  </div>
+					  <div class="body-contentbox">
+						<p></p>
+					  </div>
+					  
+					  
+					  <div class="pop-btn pop-button" id="terms_confirm">확인</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		
 	</div>
-	<!-- <script src="http://code.jquery.com/jquery-3.6.3.min.js"></script> -->
 	<script src="src/js/header_scroll_event.js"></script>
 	<script src="src/js/main_slider_event.js"></script>
-	<script src="src/js/anti_bullying.js"></script>
+	<!-- <script src="src/js/anti_bullying.js"></script> -->
+	<script src="src/js/pop_up_event.js"></script>
 </body>
 </html>
