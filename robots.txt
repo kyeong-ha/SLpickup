@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+Allow: dest/css
+Allow: src/js
