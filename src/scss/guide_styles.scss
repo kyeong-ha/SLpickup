@@ -123,46 +123,48 @@ p{
             margin-top: 3.2%;
             background-color: #E6EEF4;
             box-sizing: border-box;
-            border-radius: 20px;
-        }
-        .text_round_box{
-            width: 100%;
             border-radius: 15px;
-            display: flex;
-            justify-content: center;
+        }
+        #step3{
+            .text_round_box{
+                width: 100%;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
 
-            .content_additional{
-                width: 90%;
-                height: max-content;
-                margin-bottom: 3.3%;
-                margin-top: 4.5%;
-                .additional_title 
-                {
-                    margin-bottom: 3.3%;
-                    p{
-                        font-size: min(2.6vw, 35px);
-                    }
-                }
-                .additional_content{
-                    width: 100%;
+                .content_additional{
+                    width: 90%;
                     height: max-content;
-                    .households{
-                        margin-top: 2%;
-                        .bold_text{
-                            font-size: min(1.8vw, 24px);
-                            line-height: min(2.7vw, 38px);
-                            display: block;
-                            margin-bottom: 1%;
-                            margin-left: 1%;
+                    margin-bottom: 3.3%;
+                    margin-top: 4.5%;
+                    .additional_title 
+                    {
+                        margin-bottom: 3.3%;
+                        p{
+                            font-size: min(2.6vw, 35px);
                         }
-                        img{
-                            max-width: 100%;
-                            width: 100%;
-                            height: auto !important; 
+                    }
+                    .additional_content{
+                        width: 100%;
+                        height: max-content;
+                        .households{
+                            margin-top: 2%;
+                            .bold_text{
+                                font-size: min(1.8vw, 24px);
+                                line-height: min(2.7vw, 38px);
+                                display: block;
+                                margin-bottom: 1%;
+                                margin-left: 1%;
+                            }
+                            img{
+                                max-width: 100%;
+                                width: 100%;
+                                height: auto !important; 
+                            }
                         }
                     }
                 }
             }
         }
-    }
+    }   
 }
