@@ -5,11 +5,11 @@
 @import '_pop_up_init.scss';
 
 p{
-    font-size: min(1.8vw, 25px);
-    line-height: min(2.7vw, 38px);
+    font-size: min(1.75vw, 25px);
+    line-height: min(2.8vw, 39px);
     color: #393939;
     font-family: 'GmarketSansLight';
-    letter-spacing: -0.13vw;
+    letter-spacing: -0.08vw;
 }
 .bold_text{
     font-family: 'GmarketSansMedium';
@@ -17,6 +17,10 @@ p{
 .blue_text{
     font-family: 'GmarketSansMedium';
     color:#1E49B3;
+}
+.unbold_title{
+    font-family: 'GmarketSansMedium';
+    font-weight: normal;
 }
 .line{
     margin: 5.5% 0%;
@@ -28,143 +32,219 @@ p{
     letter-spacing: -0.13vw;
     line-height: min(3.6vw, 48px);
 }
+.popup_link{
+    margin-top: 1%;
+    font-size: min(1.8vw, 26px);
+    font-family: 'GmarketSansMedium';
+    color: #85BCD7;
+    text-decoration: underline;
+}
 
-#main{
-    #container{
-        .guide_wrap{
+.guide_wrap{
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guide_head{
+    text-align: center;
+    margin-top: 4.5%;
+}
+
+.guide_content_wrap{
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guide_content{
+    width: 86%;
+    height: max-content;
+}
+
+.content_detail{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 3%;
+
+    .content_detail_img{
+        width: 41%;
+        height: 41%;
+    }
+    .content_detail_text{
+        width: 54%;
+        height: auto;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+}
+
+.step1_bottom_text{
+    width: 100%;
+    padding-top: 3.2%;
+}
+
+.bottom_text{
+    width: 100%;
+    .small_text{
+        margin-top: 0.5%;
+        font-size: min(1.6vw, 22px);
+        line-height: min(2.3vw, 32px);
+    }
+}
+
+.app_download{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 3%;
+    li{
+        width: 47%;
+        height: 47%;
+        img{
+            max-width: 100%;
+            width: 100%;
+            height: auto !important;
+            filter: drop-shadow(4px 3px 4px rgba(172, 186, 192, 0.26));
+        }
+    }
+}
+
+.text_round_box{
+    width: max-content;
+    height: max-content;
+    margin-top: 3.2%;
+    background-color: #E6EEF4;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 4.5% 7.5%;
+}
+
+#step3{
+    .text_round_box{
+        width: 100%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        padding: 4% 6%;
+    }
+    .content_additional{
+        width: 100%;
+        height: max-content;
+        margin-top: 1%;
+
+        .additional_title 
+        {
+            margin-bottom: 3.3%;
+            p{
+                font-size: min(2.6vw, 35px);
+            }
+        }
+
+        .additional_content{
             width: 100%;
             height: max-content;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            .guide_head{
-                text-align: center;
-                margin-top: 4.5%;
-            }
-
-            .guide_content_wrap{
-                width: 100%;
-                height: max-content;
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .guide_content{
-                    width: 90%;
-                    height: max-content;
-
-                    .content_detail{
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        padding-top: 3%;
-                        .content_detail_img{
-                            width: 44%;
-                            height: 44%;
-                        }
-                        .content_detail_text{
-                            width: 56%;
-                            height: auto;
-                            text-align: center;
-
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-
-                            padding-top: 1.7%;
-
-                            .step1_bottom_text{
-                                width: 100%;
-                                padding-top: 3.2%;
-                            }
-                            .bottom_text{
-                                width: 100%;
-                                padding: 4% 0;
-                                
-                                p:last-child{
-                                    margin-top: 0.5%;
-                                    font-size: min(1.6vw, 21px);
-                                    line-height: min(2.2vw, 30px);
-                                }
-                            }
-                            .app_download{
-                                width: 100%;
-                                height: 100%;
-
-                                display: flex;
-                                justify-content: space-evenly;
-
-                                padding-top: 3%;
-                                li{
-                                    width: 45%;
-                                    height: 45%;
-                                    img{
-                                        max-width: 100%;
-                                        width: 100%;
-                                        height: auto !important;
-                                        filter: drop-shadow(4px 3px 4px rgba(172, 186, 192, 0.26));
-                                    }
-                                }
-                            }
-
-                        }
-                    }
+            .households{
+                margin-top: 2%;
+                .bold_text{
+                    font-size: min(1.8vw, 24px);
+                    line-height: min(2.7vw, 38px);
+                    display: block;
+                    margin-bottom: 1%;
+                    margin-left: 1%;
+                }
+                img{
+                    max-width: 100%;
+                    width: 100%;
+                    height: auto !important; 
                 }
             }
         }
-        .text_round_box{
-            width: 95%;
-            height: max-content;
-            margin-top: 3.2%;
-            background-color: #E6EEF4;
-            box-sizing: border-box;
-            border-radius: 15px;
-        }
-        #step3{
-            .text_round_box{
-                width: 100%;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-
-                .content_additional{
-                    width: 90%;
-                    height: max-content;
-                    margin-bottom: 3.3%;
-                    margin-top: 4.5%;
-                    .additional_title 
-                    {
-                        margin-bottom: 3.3%;
-                        p{
-                            font-size: min(2.6vw, 35px);
-                        }
-                    }
-                    .additional_content{
-                        width: 100%;
-                        height: max-content;
-                        .households{
-                            margin-top: 2%;
-                            .bold_text{
-                                font-size: min(1.8vw, 24px);
-                                line-height: min(2.7vw, 38px);
-                                display: block;
-                                margin-bottom: 1%;
-                                margin-left: 1%;
-                            }
-                            img{
-                                max-width: 100%;
-                                width: 100%;
-                                height: auto !important; 
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }   
+    }
 }
+
+#step4{
+    .content_detail_text{
+        padding-top: 2%;
+    }
+    .bottom_text{
+        margin-top: 4%;
+        text-align: right;
+    }
+}
+#step5{
+    .popup_link{
+        margin-top: 0;
+        margin-right: 2%;
+        float: right;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    p{
+      font-size: max(2.2vw, 11.3px);
+      line-height: max(3.2vw, 17px);
+    }
+    h1, h2, .non_bold_title{
+        font-size: max(3.8vw, 15.3px);
+        line-height: max(4.4vw, 21px);
+    }
+    .bottom_text{
+        .small_text{
+            font-size: max(1.9vw, 10px);
+            line-height: max(2.8vw, 15px);
+        }
+    }
+
+    #step3{
+        .content_additional{
+            .additional_title{
+                font-size: min(2.3vw, 12px);
+            }
+            .additional_content{
+                .households{
+                    .bold_text{
+                        font-size: max(1.8vw, 11.5px);
+                        line-height: max(2.1vw, 14px);
+                    }
+                }
+            }
+        }
+    }
+
+    .popup_link{
+        margin-top: 1%;
+        font-size: max(2.2vw, 12px);
+    }
+    .content_detail{
+        flex: 2;
+        .content_detail_img{
+            width: 43.5%;
+            height: 43.5%;
+        }
+        .content_detail_text{
+            width: 50%;
+            margin-right: 0;
+        }
+    }
+  }
