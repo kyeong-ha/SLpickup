@@ -8,7 +8,9 @@
 	<link rel="stylesheet" href="dest/css/event_styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	
+	<script src="http://code.jquery.com/jquery-3.6.3.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
 <body>
    <!-- Main -->
@@ -52,22 +54,21 @@
 					<div class="footer_logo">
 						<img src="src/img/container/logo.png">
 					</div>
-	
+
 					<p class="company_info">대표: 정현우, 주영현   |  주소: 경기도 하남시 미사강변남로 125, 101동 1927호(망월동)<br>
 						사업자등록번호: 538-69-00439  |  통신판매업 신고번호: 2022-경기하남-2247
 					</p>
 					
 					<p class="copyright">Copyright ⓒ Since 2022 별빛수거. All right Reserved</p>
-	
+
 					<ul class="side_link">
 						<li class="terms_of_service">
-						  <a href="javascript:void(0)" onclick="location.href='terms_of_service'">이용약관</a>
-						  </li>
-						<li class="privacy_policy">
-							<a href="javascript:void(0)" onclick="location.href='privacy_policy'">개인정보처리방침</a>
+							<a id="terms_of_service_btn">이용약관</a>
 						</li>
+						<li class="privacy_policy">
+							<a id="privacy_policy_btn">개인정보처리방침</a>
+						</li>	
 					</ul>
-	
 				</footer>
 
 				<!-- 개인정보처리방침 팝업창 -->
@@ -412,6 +413,8 @@
 					</div>
 				</div>
 		</main>
-	</div> 
+	</div>
+	<script src="src/js/header_scroll_event.js"></script>
+	<script src="src/js/pop_up_event.js"></script> 
 </body>
 </html>

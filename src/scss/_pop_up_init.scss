@@ -118,7 +118,7 @@
             $i: 1;
             @while $i < 12 {
                 &:nth-child(#{$i}) {
-                    transition-delay: $i / 20 + s;
+                    transition-delay: #{$i} / 20 + s;
                 }
                 $i: $i + 1;
             }

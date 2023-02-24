@@ -8,7 +8,9 @@
 	<link rel="stylesheet" href="dest/css/guide_styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	
+	<script src="http://code.jquery.com/jquery-3.6.3.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
 <body>
 	<!-- Main -->
@@ -16,6 +18,7 @@
 
 		<!-- Container -->
 		<main id="container">
+
 				<!-- Header -->
 				<header id="header">
 					<ul class="menubar">
@@ -52,17 +55,17 @@
 					<div class="guide_content_wrap">
 						<div class="guide_content" id="step1">
 							<div class="content_title">
-								<h1>STEP1.</h1> <h2>앱 다운로드</h2><h1>하기</h1>
+								<h1>STEP 1.</h1> <h2>앱 다운로드</h2><h1>하기</h1>
 							</div>
 							<div class="content_detail">
 								<img class="content_detail_img" src="src/img/guide/step1.png">
 								<div class="content_detail_text">
-									<div class="default_text">
+									<div class="top_text">
 										<p>AppStore 또는 PlayStore 에서<br>
 										'<span class="bold_text">별빛수거</span>' 를 검색하신 뒤,<br>
 										어플을 다운로드 해주세요!</p>
 									</div>
-									<div class="step1_text_column">
+									<div class="step1_bottom_text">
 										<p>또는, 아래 버튼을 통해 설치하실 수 있습니다.</p>
 										<ul class="app_download">
 											<li>
@@ -79,29 +82,27 @@
 
 						<hr class="line" width="96%" align="center" color="#EEF0F3">
 
-						<div class="guide_content step2">
-							<div class="guide_content" id="step1">
-								<div class="content_title">
-									<h1>STEP2.</h1> <h2>회원가입</h2><h1>하기</h1>
-								</div>
-								<div class="content_detail">
-									<img class="content_detail_img" src="src/img/guide/step2.png">
-									<div class="content_detail_text">
-										<div class="default_text">
-											<p>'<span class="bold_text">별빛수거</span>' 앱을 실행한 뒤,<br>
-												회원가입 버튼을 눌러 정보를 입력하고<br>
-												<span class="bold_text">회원가입</span>을 완료해 주세요!</p>
-										</div>
-										<div class="text_column">
-											<div class="text_round_box">
-												<p>
-													🚨 잠깐! <span class="blue_text">수거 가능 지역</span>을 확인해 주세요!<br>
-												</p>
-												<p>
-													- 경기도 하남시 <span class="bold_text">미사 전 지역</span> 및 <span class="bold_text">풍산동 일부<br></span>
-												  	- 서울특별시 강동구 <span class="bold_text">강일동 일부</span>
-												</p>
-											</div>
+						<div class="guide_content" id="step2">
+							<div class="content_title">
+								<h1>STEP 2.</h1> <h2>회원가입</h2><h1>하기</h1>
+							</div>
+							<div class="content_detail">
+								<img class="content_detail_img" src="src/img/guide/step2.png">
+								<div class="content_detail_text">
+									<div class="top_text">
+										<p>'<span class="bold_text">별빛수거</span>' 앱을 실행한 뒤,<br>
+											회원가입 버튼을 눌러 정보를 입력하고<br>
+											<span class="bold_text">회원가입</span>을 완료해 주세요!</p>
+									</div>
+									<div class="text_round_box">
+										<div class="bottom_text">
+											<p>
+												🚨 잠깐! <span class="blue_text">수거 가능 지역</span>을 확인해 주세요!<br>
+											</p>
+											<p>
+												- 경기도 하남시 <span class="bold_text">미사 전 지역</span> 및 <span class="bold_text">풍산동 일부<br></span>
+												- 서울특별시 강동구 <span class="bold_text">강일동 일부</span>
+											</p>
 										</div>
 									</div>
 								</div>
@@ -110,8 +111,52 @@
 
 						<hr class="line" width="96%" align="center" color="#EEF0F3">
 
-						<div class="guide_content step3">
-
+						<div class="guide_content" id="step3">
+							<div class="content_title">
+								<h1>STEP 3.</h1> <h2>서비스 신청</h2><h1>하기</h1>
+							</div>
+							<div class="content_detail">
+								<img class="content_detail_img" src="src/img/guide/step3.png">
+								<div class="content_detail_text">
+									<div class="top_text">
+										<p>
+											<span class="bold_text">쓰레기 배출량에 적합한 서비스</span>를 선택하고,<br>
+											신청 내역의 서비스 내용을 꼼꼼하게<br>
+											확인하신 후, <span class="bold_text">신청하기 버튼</span>을 클릭해 주세요.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="text_round_box">
+								<div class="content_additional">
+									<div class="additional_title">
+										<p>💡 가구 별 <span class="bold_text">별빛 서비스 추천</span></p>
+									</div>
+									<div class="additional_content">
+										<div class="households" id="1person">
+											<span class="bold_text">1인 가구 :</span>
+											<img src="src/img/guide/sevices/economy.png">
+										</div>
+										<div class="households" id="1-2person">
+											<span class="bold_text">1-2인 가구 :</span>
+											<img src="src/img/guide/sevices/business.png">
+										</div>
+										<div class="households" id="2-3person">
+											<span class="bold_text">2-3인 가구 :</span>
+											<img src="src/img/guide/sevices/business.png">
+											<img src="src/img/guide/sevices/first.png">
+										</div>
+										<div class="households" id="3-4person">
+											<span class="bold_text">3-4인 가구 :</span>
+											<img src="src/img/guide/sevices/vip.png">
+										</div>
+										<div class="households" id="other_person">
+											<span class="bold_text">그 이상의 가구 :</span>
+											<img src="src/img/guide/sevices/vvip.png">
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<hr class="line" width="96%" align="center" color="#EEF0F3">
@@ -140,22 +185,21 @@
 					<div class="footer_logo">
 						<img src="src/img/container/logo.png">
 					</div>
-	
+
 					<p class="company_info">대표: 정현우, 주영현   |  주소: 경기도 하남시 미사강변남로 125, 101동 1927호(망월동)<br>
 						사업자등록번호: 538-69-00439  |  통신판매업 신고번호: 2022-경기하남-2247
 					</p>
 					
 					<p class="copyright">Copyright ⓒ Since 2022 별빛수거. All right Reserved</p>
-	
+
 					<ul class="side_link">
 						<li class="terms_of_service">
-						  <a href="javascript:void(0)" onclick="location.href='terms_of_service'">이용약관</a>
-						  </li>
-						<li class="privacy_policy">
-							<a href="javascript:void(0)" onclick="location.href='privacy_policy'">개인정보처리방침</a>
+							<a id="terms_of_service_btn">이용약관</a>
 						</li>
+						<li class="privacy_policy">
+							<a id="privacy_policy_btn">개인정보처리방침</a>
+						</li>	
 					</ul>
-	
 				</footer>
 				
 				<!-- 개인정보처리방침 팝업창 -->
@@ -501,5 +545,7 @@
 				</div>
 		</main>
 	</div>
+	<script src="src/js/header_scroll_event.js"></script>
+	<script src="src/js/pop_up_event.js"></script>
 </body>
 </html>
