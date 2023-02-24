@@ -202,17 +202,17 @@ p{
 
 @media screen and (max-width: 750px) {
     p{
-      font-size: max(2.2vw, 11.3px);
-      line-height: max(3.2vw, 17px);
+      font-size: max(2.3vw, 12px);
+      line-height: max(3.2vw, 17.4px);
     }
     h1, h2, .non_bold_title{
-        font-size: max(3.8vw, 15.3px);
-        line-height: max(4.4vw, 21px);
+        font-size: max(4vw, 16px);
+        line-height: max(5vw, 22px);
     }
     .bottom_text{
         .small_text{
-            font-size: max(1.9vw, 10px);
-            line-height: max(2.8vw, 15px);
+            font-size: max(2vw, 10.7px);
+            line-height: max(2.9vw, 15.7px);
         }
     }
 
@@ -239,11 +239,11 @@ p{
     .content_detail{
         flex: 2;
         .content_detail_img{
-            width: 43.5%;
-            height: 43.5%;
+            width: 40%;
+            height: 40%;
         }
         .content_detail_text{
-            width: 50%;
+            width: 54%;
             margin-right: 0;
         }
     }
