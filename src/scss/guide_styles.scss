@@ -194,7 +194,7 @@ p{
 #step5{
     .popup_link{
         margin-top: 0;
-        margin-right: 2%;
+        margin-right: 0.5%;
         float: right;
     }
 }
@@ -202,17 +202,17 @@ p{
 
 @media screen and (max-width: 750px) {
     p{
-      font-size: max(2.3vw, 12px);
-      line-height: max(3.2vw, 17.4px);
+      font-size: max(2.1vw, 11.4px);
+      line-height: max(3.2vw, 17px);
     }
-    h1, h2, .non_bold_title{
+    .non_bold_title{
         font-size: max(4vw, 16px);
         line-height: max(5vw, 22px);
     }
     .bottom_text{
         .small_text{
-            font-size: max(2vw, 10.7px);
-            line-height: max(2.9vw, 15.7px);
+            font-size: max(2vw, 10.1px);
+            line-height: max(2.9vw, 15.1px);
         }
     }
 
@@ -234,7 +234,7 @@ p{
 
     .popup_link{
         margin-top: 1%;
-        font-size: max(2.2vw, 12px);
+        font-size: max(2.2vw, 11.7px);
     }
     .content_detail{
         flex: 2;

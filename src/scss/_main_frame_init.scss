@@ -105,4 +105,8 @@ h2{
       height: auto;
     }
   }
+  h1, h2{
+    font-size: max(4vw, 16px);
+    line-height: max(5vw, 22px);
+  }
 }
