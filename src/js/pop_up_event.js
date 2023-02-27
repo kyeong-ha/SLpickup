@@ -22,7 +22,7 @@ $(function(){
     });
 });
 
-
+/* 외부영역 클릭시 창 닫기 */
 $(document).mouseup(function (e){
 	let LayerPopup = $(".popup-wrap");
 	if(LayerPopup.has(e.target).length === 0){
