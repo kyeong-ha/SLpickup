@@ -4,34 +4,12 @@
 @import '_footer_init.scss';
 @import '_pop_up_init.scss';
 
-p{
-    font-size: min(1.75vw, 25px);
-    line-height: min(2.8vw, 39px);
-    color: #393939;
-    font-family: 'GmarketSansLight';
-    letter-spacing: -0.08vw;
-}
-.bold_text{
-    font-family: 'GmarketSansMedium';
-}
-.blue_text{
-    font-family: 'GmarketSansMedium';
-    color:#1E49B3;
-}
-.unbold_title{
-    font-family: 'GmarketSansMedium';
-    font-weight: normal;
-}
+
+
 .line{
     margin: 5.5% 0%;
 }
-.non_bold_title{
-    color: #393939;
-    font-family: 'GmarketSansMedium';
-    font-size: min(3vw, 43px);
-    letter-spacing: -0.13vw;
-    line-height: min(3.6vw, 48px);
-}
+
 .popup_link{
     margin-top: 1%;
     font-size: min(1.8vw, 26px);
