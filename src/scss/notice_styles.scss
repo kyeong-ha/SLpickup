@@ -1,0 +1,66 @@
+@import '_animations.scss';
+@import '_font_imports.scss';
+@import '_main_frame_init.scss';
+@import '_footer_init.scss';
+@import '_pop_up_init.scss';
+
+#header{ // 공지사항탭 색상 변경
+    #notice_button{
+        font-size: min(1.6vw, 21.5px);
+        font-family: 'GmarketSansMedium';
+        a{ color: #4b4d51; }
+    }
+}
+
+.line{
+    margin: 6.2% 0%;
+}
+
+.notice_wrap{
+    width: 100%;
+    height: max-content;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notice_head{
+    text-align: center;
+    margin-top: 4.5%;
+}
+
+.notice_menu{
+    margin-top: 1.5%;
+    width: 50%;
+    .button{
+        font-size: min(1.7vw, 22.5px);
+    }
+    :hover{
+        font-size: min(1.9vw, 23.5px);
+    }
+}
+
+.notice_content_wrap{
+    width: 85%;
+}
+
+.notice_post{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    img{
+        width: 100%;
+        height: auto;
+        box-shadow: 0 0 40px 0 rgba(63, 63, 63, 0.06);
+        margin: 0.6% 0;
+    }
+    :hover{
+        width: 104%;
+    }
+}

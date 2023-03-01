@@ -5,7 +5,14 @@
 @import '_pop_up_init.scss';
 
 
+#header{ // 가이드탭 색상 변경
+    #guide_button{
+        font-size: min(1.6vw, 21.5px);
+        font-family: 'GmarketSansMedium';
+        a{ color: #4b4d51; }
+    }
 
+}
 .line{
     margin: 5.5% 0%;
 }

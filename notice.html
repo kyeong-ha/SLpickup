@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>별빛수거 - 별빛수거</title>
 
-	<link rel="stylesheet" href="dest/css/event_styles.css">
+	<link rel="stylesheet" href="dest/css/notice_styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
@@ -21,12 +21,12 @@
 				<!-- Header -->
 				<header id="header">
 					<ul class="menubar">
-							<li class="menubar button">
+						<li class="menubar button" id="guide_button">
 							<a href="javascript:void(0)" onclick="location.href='guide'">이용가이드</a>
 						</li>
 	
-							<li class="menubar button">
-							<a href="javascript:void(0)" onclick="location.href='notice'">별빛수거</a>
+							<li class="menubar button" id="notice_button">
+							<a href="javascript:void(0)" onclick="location.href='notice'">공지사항</a>
 						</li>
 	
 						<li class="menubar logo">
@@ -44,12 +44,58 @@
 					</ul>
 				</header>
 
+				<!-- Notice Board -->
 				<section class="notice_wrap">
 					<div class="notice_head">
-						<p class="non_bold_title">쓰레기 수거, 별빛 서비스.</p>
-						<h2>이용</h2><h1>가이드</h1>
+						<p class="non_bold_title" style="display: contents;">별빛수거 <h2>공지사항</h2></p>
 					</div>
+
+					<div class="notice_menu">
+						<ul class="menubar">
+							<li class="button notice_tap" id="all_tap">전체</li>
+							<li class="button notice_tap" id="notice_tap">공지사항</li>
+							<li class="button notice_tap" id="faq_tap">자주 묻는 질문</li>
+							<li class="button notice_tap" id="etc_tap">기타</li>
+						</ul>
+					</div>
+
+					<hr class="line" width="96%" align="center" color="#EEF0F3">
+
+					<div class="notice_content_wrap">
+						<div class="notice_post" id="faq_type">
+							<img src="src/img/notice/faq_1.png">
+							<!-- <p class="post_title"><span class="post_title_icon">🔎</span>[FAQ] 별빛수거 가방이 분실 또는 파손 되었어요.</p> -->
+						</div>
+
+						<div class="notice_post" id="faq_type">
+							<img src="src/img/notice/faq_2.png">
+							<!-- <p class="post_title"><span class="post_title_icon">🔎</span>[FAQ] 서비스 신청 후 키트는 언제 배송되나요?</p> -->
+						</div>
+
+						<div class="notice_post" id="faq_type">
+							<img src="src/img/notice/faq_3.png">
+							<!-- <p class="post_title"><span class="post_title_icon">🔎</span>[FAQ] 이용 중인 서비스를 변경하고 싶어요.</p> -->
+						</div>
+
+						<div class="notice_post" id="faq_type">
+							<img src="src/img/notice/faq_4.png">
+							<!-- <p class="post_title"><span class="post_title_icon">🔎</span>[FAQ] 이번 달의 남은 수거 횟수는 이월 되나요?</p> -->
+						</div>
+
+						<div class="notice_post" id="faq_type">
+							<img src="src/img/notice/faq_5.png">
+							<!-- <p class="post_title"><span class="post_title_icon">🔎</span>[FAQ] 서비스 이용 가능 시간이 궁금해요.</p> -->
+						</div>
+
+						<div class="notice_post" id="notice_type">
+							<img src="src/img/notice/notice_1.png">
+							<!-- <p class="post_title"><span class="post_title_icon">📢</span>[공지] 2023년 1월 xx일, 별빛수거 GRAND OPEN!</p> -->
+						</div>
+					</div>
+
+					<hr class="line" width="96%" align="center" color="#EEF0F3">
 				</section>
+
 				<!-- Side Image -->
 				<section class="container side_image animate__animated animate__fadeInDown">
 					<img src="src/img/container/section2.png">

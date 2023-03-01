@@ -1,4 +1,8 @@
 /* init */
+p, a, img, ul, li{
+  transition: all linear 0.2s;
+}
+
 html, body, ul, li, p, a{
     margin:0;
     padding:0;
@@ -8,7 +12,6 @@ html, body, ul, li, p, a{
     text-decoration: none;
     color: #121212;
 }
-
 body{
     width:100%;
     height:100%;
@@ -75,32 +78,6 @@ p{
 
     transition: all 0.2s 0s linear;
     z-index: 1;
-
-    .menubar{
-      width: 96%;
-      height: 100%;
-      
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .button{
-      color: #7b7e83;
-      font-size: min(1.5vw, 21px);
-      font-family: 'GmarketSansLight';
-      cursor: pointer;
-    }
-    .logo{
-      a{
-        display: flex;
-        align-items: center;
-      }
-      img{
-        width: auto;
-        height: min(6.5vw, 93px);
-        cursor: pointer;
-      }
-    }
 }
 
 #container{
@@ -116,6 +93,39 @@ p{
     box-shadow: 0 2px 40px 3px rgba(0,0,0,0.09);
 }
 
+.menubar{
+  width: 96%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.button{
+  color: #5c5e62;
+  :only-child{ color: #5c5e62; }
+  font-size: min(1.5vw, 21px);
+  font-family: 'GmarketSansLight';
+  cursor: pointer;
+
+  :hover {
+    font-size: min(1.67vw, 22.5px);
+  }
+}
+.logo{
+  a{
+    display: flex;
+    align-items: center;
+  }
+  img{
+    width: auto;
+    height: min(6.5vw, 93px);
+    cursor: pointer;
+  }
+  :hover img{
+    opacity: 75%;
+  }
+}
 
 @media screen and (max-width: 750px) {
   #container{
