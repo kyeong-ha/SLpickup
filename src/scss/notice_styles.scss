@@ -31,13 +31,13 @@
 }
 
 .notice_menu{
-    margin-top: 1.5%;
-    width: 50%;
+    margin-top: 2.3%;
+    width: 55%;
     .button{
-        font-size: min(1.7vw, 22.5px);
+        font-size: min(1.8vw, 22.5px);
     }
     .selected{
-        font-size: min(1.8vw, 23.3px);
+        font-size: min(1.9vw, 23.3px);
         font-family: 'GmarketSansMedium';
         color: #4b4d51;
     }
@@ -73,6 +73,20 @@
 @media screen and (max-width: 750px) {
     #header #notice_button{
         font-size: max(2.2vw, 12.5px);
+    }
+
+    .notice_menu{
+        .button{
+            font-size: max(2.25vw, 13px);
+        }
+        .selected{
+            font-size: max(2.35vw, 14px);
+            font-family: 'GmarketSansMedium';
+            color: #4b4d51;
+        }
+        :hover{
+            font-size: max(2.45vw, 14.2px);
+        }
     }
 }
   
