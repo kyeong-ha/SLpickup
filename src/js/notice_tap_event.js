@@ -14,6 +14,7 @@ const noticeType = document.querySelectorAll('#notice_type');
 const faqType = document.querySelectorAll('#faq_type');
 const etcType = document.querySelectorAll('#etc_type');
 
+const sideImage = document.getElementById('side_image');
 const taps = [allTap, noticeTap, faqTap, etcTap];
 const types = [noticeType, faqType, etcType];
 
@@ -31,7 +32,10 @@ function showSelectedList(selectedIndex){
     types.forEach((value, index) => {
         if(index == selectedIndex) {
             value.forEach((i) => {
-                i.style.display = 'flex';
+                i.style.display = 'none';
+                setTimeout(function(){
+                    i.style.display = 'flex';
+                }, 20)
             });
         }
         else{
@@ -40,6 +44,10 @@ function showSelectedList(selectedIndex){
             });
         }
     });
+    sideImage.style.display = 'none';
+    setTimeout(function(){
+        sideImage.style.display = 'block';
+    }, 10);
 }
 
 /* default */
@@ -50,9 +58,16 @@ allTap.addEventListener("click", (e) => {
     selectedEffect(0);
     types.forEach((value, index) => {
         value.forEach((i) => {
-            i.style.display = 'flex';
+            i.style.display = 'none';
+            setTimeout(function(){
+                i.style.display = 'flex';
+            }, 20)
         });
     });
+    sideImage.style.display = 'none';
+    setTimeout(function(){
+        sideImage.style.display = 'block';
+    }, 10);
 });
 
 /* if click a NOTICE tap */
