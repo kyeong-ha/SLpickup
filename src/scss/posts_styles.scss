@@ -21,20 +21,53 @@
     font-family: 'GmarketSansMedium';
     font-size: min(2.6vw, 32px);
     letter-spacing: -0.13vw;
-    line-height: min(2.6vw, 40px);
+    line-height: normal;
+    // line-height: min(2.6vw, 40px);
 }
 
 .post_wrap{
+    width: 100%;
+    height: max-content;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // hr{align-self: center;}
 }
 
+.post_head{
+    width: 100%;
+    height: auto;
+
+    margin-top: 4.5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // align-self: center;
+    .type_icon{
+        font-size: min(3.6vw, 40px);
+        line-height: normal;
+        margin-bottom: 0.5%;
+    }
+}
+
+.post_content{
+    width:82%;
+    height: auto;
+}
 @media screen and (max-width: 750px) {
     .non_bold_title{
         font-size: max(3.2vw, 16.5px);
-        line-height: max(5vw, 22px);
+        // line-height: max(5vw, 22px);
     }
     #header #notice_button{
         font-size: max(2.2vw, 12.5px);
+    }
+    .post_head{
+        .type_icon{
+            font-size: max(4vw, 21px);
+        }
     }
 }
   
