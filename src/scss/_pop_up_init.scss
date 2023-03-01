@@ -46,6 +46,11 @@
     overflow-y:auto;
     height: 50vh;
     min-height:100px;
+    width:100%;
+    img{
+      width: 100%;
+      height: auto;
+    }
     p{
       color: #585766;
       font-size: max(1.9vh, 13px);

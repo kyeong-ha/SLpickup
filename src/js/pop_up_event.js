@@ -9,6 +9,16 @@ $(function(){
         document.body.style.overflow = 'hidden';
         document.body.style.touchAction = 'none';
     });
+    $("#recycle_caution").click(function(){        
+        $("#recycle_caution_popup").css('display','flex').hide().fadeIn();
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
+    });
+    $("#kit_info").click(function(){        
+        $("#kit_info_popup").css('display','flex').hide().fadeIn();
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
+    });
 
     $("#privacy_confirm").click(function(){
         $("#privacy_popup").fadeOut();
@@ -17,6 +27,16 @@ $(function(){
     });
     $("#terms_confirm").click(function(){
         $("#terms_popup").fadeOut();
+        document.body.style.overflow = '';
+        document.body.style.touchAction = '';
+    });
+    $("#recycle_caution_confirm").click(function(){
+        $("#recycle_caution_popup").fadeOut();
+        document.body.style.overflow = '';
+        document.body.style.touchAction = '';
+    });
+    $("#kit_info_confirm").click(function(){
+        $("#kit_info_popup").fadeOut();
         document.body.style.overflow = '';
         document.body.style.touchAction = '';
     });
