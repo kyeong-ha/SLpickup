@@ -85,6 +85,7 @@ function prevMove() {
   currSlide--;
   // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
   if (currSlide > -1) {
+    console.log('if');
     const offset = slideWidth * currSlide;
 
     slideItems.forEach((i) => {
@@ -94,18 +95,19 @@ function prevMove() {
     paginationItems.forEach((i) => i.classList.remove("active"));
     paginationItems[currSlide].classList.add("active");
   } else {
+    console.log('else if');
     currSlide = maxSlide;
+
     let offset = slideWidth * currSlide;
 
     slideItems.forEach((i) => {
-      i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+      i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
     });
 
     currSlide--;
     offset = slideWidth * currSlide;
 
     setTimeout(() => {
-
       slideItems.forEach((i) => {
         i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
       });
