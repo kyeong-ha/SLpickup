@@ -36,6 +36,11 @@
     .button{
         font-size: min(1.7vw, 22.5px);
     }
+    .selected{
+        font-size: min(1.8vw, 23.3px);
+        font-family: 'GmarketSansMedium';
+        color: #4b4d51;
+    }
     :hover{
         font-size: min(1.9vw, 23.5px);
     }
