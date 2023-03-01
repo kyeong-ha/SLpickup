@@ -1,7 +1,8 @@
 const slideWrap = document.querySelector(".main_info");
 
-const slide = document.querySelector(".slide");
-let slideWidth = slide.clientWidth;
+let slide = document.querySelector(".slide");
+let item1 = document.querySelector(".item1 img");
+let slideWidth = item1.clientWidth;
 
 let slideItems = document.querySelectorAll(".slide");
 const maxSlide = slideItems.length;
@@ -48,16 +49,18 @@ function nextMove() {
 
   // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위함
   if (currSlide < maxSlide) {
+    console.log('if')
     const offset = slideWidth * currSlide;
  
     slideItems.forEach((i) => {
       i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
-    });
+    }, 0);
 
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItems.forEach((i) => i.classList.remove("active"));
     paginationItems[currSlide].classList.add("active");
   } else {
+    console.log('else if')
     currSlide = -1;
     
     let offset = slideWidth * currSlide;
@@ -120,7 +123,8 @@ function prevMove() {
 
 // 브라우저 화면이 조정될 때 마다 slideWidth를 변경하기 위해
 window.addEventListener("resize", () => {
-  slideWidth = slide.clientWidth;
+  slideWidth = item1.clientWidth;
+  console.log(slideWidth);
 });
 
 // 각 페이지네이션 클릭 시 해당 슬라이드로 이동하기
