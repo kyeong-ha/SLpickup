@@ -64,3 +64,10 @@
         width: 104%;
     }
 }
+
+@media screen and (max-width: 750px) {
+    #header #notice_button{
+        font-size: max(2.2vw, 12.5px);
+    }
+}
+  

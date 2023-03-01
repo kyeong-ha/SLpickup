@@ -3,3 +3,38 @@
 @import '_main_frame_init.scss';
 @import '_footer_init.scss';
 @import '_pop_up_init.scss';
+
+#header{ // 공지사항탭 색상 변경
+    #notice_button{
+        font-size: min(1.6vw, 21.5px);
+        font-family: 'GmarketSansMedium';
+        a{ color: #4b4d51; }
+    }
+}
+
+.line{
+    margin: 6.2% 0%;
+}
+
+.non_bold_title{
+    color: #393939;
+    font-family: 'GmarketSansMedium';
+    font-size: min(2.6vw, 32px);
+    letter-spacing: -0.13vw;
+    line-height: min(2.6vw, 40px);
+}
+
+.post_wrap{
+
+}
+
+@media screen and (max-width: 750px) {
+    .non_bold_title{
+        font-size: max(3.2vw, 16.5px);
+        line-height: max(5vw, 22px);
+    }
+    #header #notice_button{
+        font-size: max(2.2vw, 12.5px);
+    }
+}
+  
