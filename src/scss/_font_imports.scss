@@ -2,7 +2,7 @@
     @font-face {
         font-family: 'GmarketSansMedium';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-        src: url('../font/GmarketSansTTF/GmarketSansTTFMedium.ttf') format('truetype');
+        src: url('../font/GmarketSansOTF/GmarketSansMedium.otf') format('opentype');
         font-weight: bolder;
         font-style: normal;
     }
@@ -11,6 +11,7 @@
         font-family: 'GmarketSansLight';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
         src: url('../font/GmarketSansTTF/GmarketSansTTFLight.ttf') format('truetype');
+        src: url('../font/GmarketSansOTF/GmarketSansLight.otf') format('opentype');
         font-weight: normal;
         font-style: normal;
     }
@@ -20,6 +21,7 @@
         font-weight: bold;
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
         src: url('../font/GmarketSansTTF/GmarketSansTTFBold.ttf') format('truetype');
+        src: url('../font/GmarketSansOTF/GmarketSansBold.otf') format('opentype');
         font-style: normal;
     }
 }
